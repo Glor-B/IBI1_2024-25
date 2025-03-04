@@ -1,0 +1,6 @@
+This is my self-reflection after Practical3 in IBI1.
+
+During this practical, I learn version control and some basic command in Git & GitHub. I met some challenges but after some time and effort I finally overcame it.
+
+The first challenge for me is how to correctly commit. I always forget to save the file first before adding it to git. 
+Another thing I think is important for me is I should use log to check the history after every commit, so that I'm sure the changes are commit.
