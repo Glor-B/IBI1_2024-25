@@ -1,4 +1,4 @@
-Hello, my name is Rob.
-I like drinking tea and eating chocolate biscuits.
-I am enjoying teaching IBI1 in person again 
-I am happy that I can push my repo from Visual Studio Code to GitHub
+Hello, my name is Ben Zihan.
+I like drinking black tea and coffee.
+I am enjoying studying in iZJU as a freshman. 
+I am happy that I can push my repo from Visual Studio Code to GitHub.
