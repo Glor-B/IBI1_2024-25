@@ -9,6 +9,6 @@ if bmi <= 18.5:
     # print the result
     print("Your BMI is", bmi, "You are underweight! Please eat more :(")
 elif bmi >= 30:
-    print("Your BMI is bmi", bmi, "Sorry, you are obese! Wanna some exercise?")
+    print("Your BMI is", bmi, "Sorry, you are obese! Wanna some exercise?")
 else:
     print("Your BMI is", bmi,". Wow！You are in normal weight!")
