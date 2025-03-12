@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: the computer produce 2 numbers between 1 to 5, and print the time of production until the two numbers are the same.
+# Answer: Indicate the time of randomizing when the two random number be the same.
 
 # Import libraries
 # randint allows drawing a random number,
@@ -18,4 +18,3 @@ while progress>=0:
 	if first_n == second_n:
 		print(progress)
 		break
-
