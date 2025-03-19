@@ -22,7 +22,7 @@ print(UK_country)
 print(China_province)
 
 
-#The following create a pie chart
+#The following finish task 2: create pie charts
 import matplotlib.pyplot as plt
 # First, plot the pie chart for UK
 # Convert dataframe to list
