@@ -14,7 +14,11 @@ df = pd.DataFrame(
 for vac_rate in range(0,110,10):
     # define basic variables
     N = 10000 # total number of people
-    I = 1 # infected people
+    # infected people
+    if vac_rate == 100:
+        I = 0
+    else:
+        I = 1
     R = 0 # recovered infected people
     beta = 0.3 # infection probability
     gamma = 0.05 # recovery probability
