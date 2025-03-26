@@ -1,0 +1,10 @@
+This practical is abit more challenging than previous ones.
+For me, comprehensing each function and the logic is not difficult, but it's challenging for me to get used to the way 'python' think.
+For example, to deal with probability, we have to use np.random to simulate the production of probability instead of just simply use the probability of one events.
+
+The most challenging part is the spatial SIR. At first it seemed an extremely huge project for me. I was lost in several ideas of how each part can be done and I couldn't find the start.
+So I decided to just start by doing each section, for example, first I finish the neighbor_check part (which is later transformed into a function), and slowly I hva a clearer idea of how things should go.
+I think it is important to break down a big project into small things. For example, functions help with this because I can write some small functions first before starting the whole loop.
+
+Another thing I realized is that discussing with peer also helps a lot. Not only did I learn their logic, but also by expalning my ideas to others I also become clear about what I should do next.
+Without the discussion with others I coudn't have finish spatial SIR so quickly.
