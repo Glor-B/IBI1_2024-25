@@ -37,5 +37,5 @@ for keys in gene_dic:
         splice_file.write(new_keys)
         splice_file.write(target[0] + '\n')
 
+TATA_file.close()
 splice_file.close()
-
