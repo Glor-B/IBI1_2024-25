@@ -29,5 +29,6 @@ for keys in gene_dic:
         TATA_file.write(new_keys)
         TATA_file.write(str(gene_dic[keys]) + '\n')
 
+genome.close()
 TATA_file.close()
 #print(gene_dic)
