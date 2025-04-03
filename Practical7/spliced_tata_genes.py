@@ -49,7 +49,7 @@ def TATA_counter(target_gene):
     num = len(c)
     return(num)
 
-""" #create a dictionary to store all TATA genes information
+#create a dictionary to store all TATA genes information
 gene_dic = {}
 for line in TATA_file:
     if re.search(r'>', line):
@@ -57,7 +57,7 @@ for line in TATA_file:
         gene_name = line
     # create continuous gene sequence
     if re.search(r'^[a-zA-Z]', line):
-        gene_dic[gene_name] = line """
+        gene_dic[gene_name] = line
 
 # find sequence with target splice
 for keys in gene_dic:
