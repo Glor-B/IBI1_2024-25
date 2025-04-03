@@ -44,7 +44,6 @@ for keys in gene_dic:
 genome.close()
 TATA_file.close()
 #print(gene_dic)
-TATA_file = open('TATA_genes.fa', 'r')
 
 def TATA_counter(target_gene):
     c = re.findall(r'TATA[A|T]A[A|T]', target_gene)
@@ -64,5 +63,4 @@ for keys in gene_dic:
             splice_file.write(new_keys)
             splice_file.write(target[0] + '\n')
 
-TATA_file.close()
 splice_file.close()
