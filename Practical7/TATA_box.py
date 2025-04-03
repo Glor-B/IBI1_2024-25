@@ -12,7 +12,7 @@ gene_dic = {}
 for line in genome:
     if re.search(r'>', line):
         # search for the gene name
-        gene_name = re.findall(r'>.+?_', line)[0]
+        gene_name = re.findall('gene:' + '.+?\s', line)[0]
         gene_sequence = ''
     # create continuous gene sequence
     if re.search(r'^[a-zA-Z]', line):
@@ -25,7 +25,8 @@ for line in genome:
     
 for keys in gene_dic:
     if re.search(r'TATA[A|T]A[A|T]', gene_dic[keys]):
-        new_keys = re.sub('_', '\n', keys)
+        new_keys = re.sub('gene:', '>', keys)
+        new_keys = re.sub(' ', '\n', new_keys)
         TATA_file.write(new_keys)
         TATA_file.write(str(gene_dic[keys]) + '\n')
 
