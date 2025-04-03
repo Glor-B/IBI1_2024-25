@@ -22,11 +22,13 @@ for line in genome:
     if re.search(r'>', line):
         # search for the gene name
         gene_name = re.findall('gene:' + '.+?\s', line)[0]
+        keys = re.sub('gene:', '>', gene_name)
+        keys = re.sub(' ', '\n', keys)
         gene_sequence = ''
     # create continuous gene sequence
     if re.search(r'^[a-zA-Z]', line):
         gene_sequence += line.rstrip()
-        gene_dic[gene_name] = gene_sequence
+        gene_dic[keys] = gene_sequence
     # to test, so limit the for loop time    
     '''i += 1
     if i == 100000:
@@ -48,7 +50,7 @@ def TATA_counter(target_gene):
     c = re.findall(r'TATA[A|T]A[A|T]', target_gene)
     num = len(c)
     return(num)
-
+""" 
 #create a dictionary to store all TATA genes information
 gene_dic = {}
 for line in TATA_file:
@@ -57,7 +59,7 @@ for line in TATA_file:
         gene_name = line
     # create continuous gene sequence
     if re.search(r'^[a-zA-Z]', line):
-        gene_dic[gene_name] = line
+        gene_dic[gene_name] = line """
 
 # find sequence with target splice
 for keys in gene_dic:
