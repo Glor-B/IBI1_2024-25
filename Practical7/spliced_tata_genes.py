@@ -61,6 +61,6 @@ for keys in gene_dic:
         if counter != 0:
             new_keys = keys.rstrip() + ' TATA box number: ' + str(counter) + '\n'
             splice_file.write(new_keys)
-            splice_file.write(target[0] + '\n')
+            splice_file.write(gene_dic[keys] + '\n')
 
 splice_file.close()
