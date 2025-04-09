@@ -4,12 +4,11 @@ sequence = input('Enter your target DNA sequence:')
 cut_sites = input('Enter restriction enzyme recognition sequence:')
 
 def input_check(sequence):
-    a = re.findall('[A|T|C|G]', sequence)
-    if len(a) != len(sequence):
+    check = re.findall('[A|T|C|G]', sequence)
+    if len(check) != len(sequence):
         return False
     else:
         return True
-#print(input_check(cut_sites))
 
 def cut(sequence, cut_sites):
     output = []
