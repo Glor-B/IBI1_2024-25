@@ -17,7 +17,7 @@ def cut(sequence, cut_sites):
         for i in range(0, len(sequence) - len(cut_sites)):
             if sequence[i: i+len(cut_sites)] == cut_sites:
                 output.append(i+1)
-        return output
+        return 'The position of cut sites:' + str(output)
     else: 
         return 'No restriction enzyme cut sites'
     #print(cut(sequence, cut_sites))
