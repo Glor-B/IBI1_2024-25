@@ -1,0 +1,20 @@
+Length of SOD2_human: 222 AAs
+Localization: mitochondria
+Range of percentage identities: 51% - 100%
+
+Comparison between SOD2_human and SOD2_mouse:
+Edit distance is: 22
+Alignment score is: 1.0
+Percentage of identical amino acids: 90.09009009009009 %
+
+Comparison between SOD2_human and random sequence:
+Edit distance is: 218
+Alignment score is: -337.0
+Percentage of identical amino acids: 1.8018018018018018 %
+
+Comparison between SOD2_mouse and random sequence:
+Edit distance is: 218
+Alignment score: -340.0
+Percentage of identical amino acids: 1.8018018018018018 %
+
+SOD2_human and SOD2_mouse are the most closely related
