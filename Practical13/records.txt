@@ -1,6 +1,6 @@
 Length of SOD2_human: 222 AAs
 Localization: mitochondria
-Range of percentage identities: 51% - 100%
+Range of percentage identities: 58.1% - 100%
 
 Comparison between SOD2_human and SOD2_mouse:
 Edit distance is: 22

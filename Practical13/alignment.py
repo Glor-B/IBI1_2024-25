@@ -23,7 +23,7 @@ def seq_compare(seq1, seq2):
     for i in range(len(seq1)):
         if seq1[i] != seq2[i]:
             edit_distance += 1 
-            score += matrix[seq1[i]][seq2[i]]
+        score += matrix[seq1[i]][seq2[i]]
     percentage = (len(seq1) - edit_distance ) / len(seq1) * 100
     print('Edit distance:', edit_distance)
     print('Alignment score:', score)
