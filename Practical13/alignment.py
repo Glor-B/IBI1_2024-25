@@ -27,7 +27,7 @@ def seq_compare(seq1, seq2):
     percentage = (len(seq1) - edit_distance ) / len(seq1) * 100
     print('Edit distance:', edit_distance)
     print('Alignment score:', score)
-    print('Percentage of identical amino acids:', percentage, '%\n')
+    print('Percentage of identical amino acids:', round(percentage, 2), '%\n')
 
 print('Comparison between SOD2_human and SOD2_mouse:')
 seq_compare(SOD2_human, SOD2_mouse)

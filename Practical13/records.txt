@@ -3,18 +3,18 @@ Localization: mitochondria
 Range of percentage identities: 58.1% - 100%
 
 Comparison between SOD2_human and SOD2_mouse:
-Edit distance is: 22
-Alignment score is: 1.0
-Percentage of identical amino acids: 90.09009009009009 %
+Edit distance: 22
+Alignment score: 1097.0
+Percentage of identical amino acids: 90.09 %
 
 Comparison between SOD2_human and random sequence:
-Edit distance is: 218
-Alignment score is: -337.0
-Percentage of identical amino acids: 1.8018018018018018 %
+Edit distance: 211
+Alignment score: -260.0
+Percentage of identical amino acids: 4.95 %
 
 Comparison between SOD2_mouse and random sequence:
-Edit distance is: 218
-Alignment score: -340.0
-Percentage of identical amino acids: 1.8018018018018018 %
+Edit distance: 212
+Alignment score: -262.0
+Percentage of identical amino acids: 4.5 %
 
 SOD2_human and SOD2_mouse are the most closely related
