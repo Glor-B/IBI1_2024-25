@@ -1,0 +1,4 @@
+Question: What country or countries have recorded a DALYs greater than 650,000 in a single year?
+The question is addressed in line 33-34
+There's only one country of which recorded DALYs is above 650000. This is fewer than I expected. 
+Maybe this country suffer the most dring the epidemic since only the recorded DALYs of this country reach the 650000 threshold.

@@ -16,12 +16,12 @@ for i in dalys_data.loc[ : , "Year"]:
         ls.append(True)
     else:
         ls.append(False)
-#print(dalys_data.iloc[ls , : ])
+print(dalys_data.iloc[ls , : ])
 
 # Compute the mean DALYs in the UK and France
 uk = dalys_data.loc[dalys_data.Entity == "United Kingdom", "DALYs"].mean()
 France = dalys_data.loc[dalys_data.Entity == "France", "DALYs"].mean()
-# print(uk, France)
+print(uk, France)
 # The mean DALYs in the UK was greater than France
 
 # Create a plot showing the DALYS over time in the UK.
