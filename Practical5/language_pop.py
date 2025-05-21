@@ -1,15 +1,13 @@
 # create the dictionary (task 1)
 language_pop = {'JavaScript': 62.3, 'HTML': 52.9, 'Python': 51, 'SQL': 51, 'TypeScript': 38.5}
+print(language_pop)
 
 # The folowing create a bar graph for given data (task 2)
 # import the package
 import matplotlib.pyplot as plt
 import numpy as np
-#create two lists
-language = ['JavaScript', 'HTML', 'Python', 'SQL', 'TypeScipt']
-users_percentage = [62.3, 52.9, 51, 51, 38.5]
 #create the bar graph
-plt.bar(language, users_percentage)
+plt.bar(list(language_pop.keys()), list(language_pop.values()))
 #set the x-label, y label & tittle
 plt.xlabel('language type')
 plt.ylabel('users percentage')

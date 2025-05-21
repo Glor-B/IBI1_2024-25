@@ -27,8 +27,8 @@ for key in country_nation:
         province_pop_China[key] = country_pop[key]
         China_xlabel.append(key)
         China_y.append(country_pop[key])
-print(country_pop_UK)
-print(province_pop_China)
+print(UK_y)
+print(China_y)
 """ print(UK_xlabel)
 print(UK_y) """
 # Draw the pie chart
