@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: Indicate the time of randomizing when the two random number be the same.
+# Answer: the code counts how many iterations it takes until the two random numbers match.
 
 # Import libraries
 # randint allows drawing a random number,
