@@ -1,14 +1,8 @@
 import re
+# 你要把它改成一个函数！！还要记得把这行删掉
 
 sequence = input('Enter your target DNA sequence:')
 cut_sites = input('Enter restriction enzyme recognition sequence:')
-
-def input_check(sequence):
-    check = re.findall('[A|T|C|G]', sequence)
-    if len(check) != len(sequence):
-        return False
-    else:
-        return True
 
 def cut(sequence, cut_sites):
     output = []
@@ -22,7 +16,10 @@ def cut(sequence, cut_sites):
         return 'No restriction enzyme cut sites'
     #print(cut(sequence, cut_sites))
 
-if input_check(sequence) and input_check(cut_sites):
+check1 = re.findall('[A|T|C|G]', sequence)
+check2 = re.findall('[A|T|C|G]', cut_sites)
+
+if len(check1) == len(sequence) and len(check2) == len(cut_sites):
     print(cut(sequence, cut_sites))
 else:
     print('Please ensure that you enter the right DNA sequence.')
