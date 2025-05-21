@@ -1,4 +1,6 @@
 import re
+# 你要把它改成数完整序列的TATA框数量，输出完整蓄力嗯，记得把这行删掉
+
 # Get the input & donor and acceptor
 splice = input('Choose and enter the splice donor/acceptor combination (GTAG/GCAG/ATAC):',)
 # print(type(splice))
@@ -8,7 +10,7 @@ acceptor = splice[2:4]
 
 # open file needed
 genome = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r')
-TATA_file = open('TATA_genes.fa', 'w')
+# TATA_file = open('TATA_genes.fa', 'w')
 splice_file = open(str(splice) + '_spliced_genes.fa', 'w')
 
 # select genes with TATA box
@@ -34,15 +36,13 @@ for line in genome:
     if i == 100000:
         break'''
     
-for keys in gene_dic:
+""" for keys in gene_dic:
     if re.search(r'TATA[A|T]A[A|T]', gene_dic[keys]):
         new_keys = re.sub('gene:', '>', keys)
         new_keys = re.sub(' ', '\n', new_keys)
         TATA_file.write(new_keys)
-        TATA_file.write(str(gene_dic[keys]) + '\n')
+        TATA_file.write(str(gene_dic[keys]) + '\n') """
 
-genome.close()
-TATA_file.close()
 #print(gene_dic)
 
 def TATA_counter(target_gene):
@@ -57,7 +57,7 @@ for keys in gene_dic:
         # all the splice in one gene, target is a list
         target = re.findall(donor + '[a-zA-Z]+'+ acceptor, gene_dic[keys])
         # count the number of TATA box
-        counter += TATA_counter(target[0])
+        counter = TATA_counter(target[0])
         if counter != 0:
             new_keys = keys.rstrip() + ' TATA box number: ' + str(counter) + '\n'
             splice_file.write(new_keys)
