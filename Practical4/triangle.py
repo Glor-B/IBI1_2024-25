@@ -7,4 +7,4 @@ for i in range (1,11):
     # for the ith triange, thr triangular number will increase n
     n = n + i
     # print the result for every triangular number
-    print("When n=", i, "the triangular number is", n)
+    print( "When n=", i, "the triangular number is", n)
