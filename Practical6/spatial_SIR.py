@@ -10,9 +10,8 @@ population[outbreak[0], outbreak[1]] = 1
 #define the intial parameters
 beta = 0.3
 gamma = 0.05
-timepoint = int(input('Enter the timepoint you want to check: '))
+timepoint = [0, 10, 50 ,100]
 print(outbreak)
-
 
 # check whether neighbors are recovered
 def neighbor_check(target): 
@@ -40,13 +39,13 @@ def neighbor_check(target):
         y = left
         while y <= right:
             # store the location of each types of the neighbor of this point in each list
-            neighbor = population[x, y]
+            neighbor = population[y, x]
             if neighbor == 0:
-                S.append((x, y))
+                S.append((y, x))
             elif neighbor == 1:
-                I.append((x, y))
+                I.append((y, x))
             else:
-                R.append((x, y))
+                R.append((y, x))
             y += 1
         x +=1
     return(S, I, R)
@@ -62,6 +61,7 @@ def loop(S, I, R):
             loc = I[i] # loc is the location of individuals that should recover
             population[loc] = 2
 #print(population)
+    
     # infect unrecovered neighbor
     random_I = np.random.choice(range(0, 2), len(S), p = (1 - beta, beta))
     #print(random_I)
@@ -73,27 +73,28 @@ def loop(S, I, R):
     return(population)
 #print(population)  
 
-
-
-
-
-for i in range (0, timepoint):
-    # select all the infected point in population
-    infection = np.where(population == 1)
-    target = list(zip(infection[0], infection[1]))
-    loop_situation = 0 # record if loop has functioned
-    for j in target:
-            #print(population[x,y])
-            if population[j[0], j[1]] == 1:
-                # check the neighbor of this infected point
-                S, I, R = neighbor_check(j)
-                # print(S, I, R)
-                # recover infected individuals & infect S individuals, and store them in the population
-                population = loop(S, I, R)
-                
-# print(population)
-
-# plot the picture
+# plot the figure when timepoint = 0
 plt.figure(figsize = (6,4), dpi = 150)
 plt.imshow(population, cmap='viridis', interpolation='nearest') 
 plt.show()
+
+# loop for timepoint times
+for i in range (1, 101):
+    # select all the infected point in population
+    infection = np.where(population == 1)
+    # store their location
+    target = list(zip(infection[0], infection[1]))
+    for j in target:
+        #print(population[x,y])
+        if population[j[0], j[1]] == 1:
+            # check the neighbor of this infected point
+            S, I, R = neighbor_check(j)                
+            # print(S, I, R)
+            # recover infected indviduals & infect S individuals, and store them in the population
+            population = loop(S, I, R)           
+    # print(population)
+    if i in timepoint: 
+        # plot the picture
+        plt.figure(figsize = (6,4), dpi = 150)
+        plt.imshow(population, cmap='viridis', interpolation='nearest') 
+        plt.show()

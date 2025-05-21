@@ -21,17 +21,11 @@ for i in range (0, 1000):
     # for every individuals infected,0 is unrecover, 1 is recover, the recovery probability is gamma
     random_R = np.random.choice(range(0,2), I, p = [1-gamma, gamma])
     new_R = sum(random_R)
-    """ for r in random_R:
-        if r == 1:
-            new_R += 1 """
     R += new_R
     # randomly pick susceptible -> infected
     # the infected probability is beta * proportion of infected people in a population, 0 is uninfected, 1 is infected
     pI = beta * I / N
     random_I = np.random.choice(range(0,2), S, p = [1 - pI, pI])
-    """ or j in random_I:
-        if j == 1:
-            new_I += 1 """
     new_I = sum(random_I)
     I = I - new_R + new_I
     S -= new_I
@@ -39,10 +33,6 @@ for i in range (0, 1000):
     S_re.append(S)
     I_re.append(I)
     R_re.append(R)
-
-""" print(S_re)
-print(I_re)
-print(R_re) """
 
 # plot the figure for the result
 plt.figure(figsize = (6,4), dpi = 150)
