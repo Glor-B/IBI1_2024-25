@@ -53,11 +53,11 @@ def TATA_counter(target_gene):
 # find sequence with target splice
 for keys in gene_dic:
     counter = 0
+    counter = TATA_counter(gene_dic[keys])
     if re.findall(donor + '[a-zA-Z]+'+ acceptor, gene_dic[keys]):
         # all the splice in one gene, target is a list
-        target = re.findall(donor + '[a-zA-Z]+'+ acceptor, gene_dic[keys])
+        # target = re.findall(donor + '[a-zA-Z]+'+ acceptor, gene_dic[keys])
         # count the number of TATA box
-        counter = TATA_counter(target[0])
         if counter != 0:
             new_keys = keys.rstrip() + ' TATA box number: ' + str(counter) + '\n'
             splice_file.write(new_keys)
